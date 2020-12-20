@@ -28,6 +28,24 @@
                     <li class="nav-item p-2">
                         @Html.ActionLink("Hàng Hóa", "Index", "HangHoas")
                     </li>
+                    @if (Session["MaKhachHang"] == null)
+                    {
+                        <li class="nav-item p-2">
+                            @Html.ActionLink("Đăng Ký", "Register", "Home")
+                        </li>
+                        <li class="nav-item p-2">
+                            @Html.ActionLink("Đăng Nhập", "Login", "Home")
+                        </li>
+                    }
+                    else
+                    {
+                        <li style="color:white;padding-top:15px">
+                            Xin Chào:@Session["TenKH"]
+                        </li>
+                        <li class="nav-item p-2">
+                            <a href="/Home/Logout">Logout</a>
+                        </li>
+                    }
                 </ul>
             </div>
         </div>

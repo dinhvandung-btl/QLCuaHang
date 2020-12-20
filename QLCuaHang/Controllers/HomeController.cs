@@ -44,12 +44,12 @@ namespace QLCuaHang.Controllers
             if (ModelState.IsValid)//kiểm tra người dùng nhập vào có hợp lệ hay không
             {
                 var mat_khau_ma_hoa = GETMD5(password);
-                var kiem_tra_tai_khoan = db.KhachHangs.Where(s => s.Email.Equals(Email) && s.password.Equals(mat_khau_ma_hoa)).ToList();
+                var kiem_tra_tai_khoan = db.KhachHangs.Where(s => s.Email.Equals(Email) && s.password.Equals(mat_khau_ma_hoa)).FirstOrDefault();
                 if (kiem_tra_tai_khoan != null)//so sánh xem Email và password nhập vào có trong database hay không
                 {
-                    Session["MaKhachHang"] = kiem_tra_tai_khoan.FirstOrDefault().MaKH;
-                    Session["TenKH"] = kiem_tra_tai_khoan.FirstOrDefault().TenKH;
-                    var checkAdmin = kiem_tra_tai_khoan.FirstOrDefault().role;
+                    Session["MaKhachHang"] = kiem_tra_tai_khoan.MaKH;
+                    Session["TenKH"] = kiem_tra_tai_khoan.TenKH;
+                    var checkAdmin = kiem_tra_tai_khoan.role;
                     if (checkAdmin == "admin")
                     {
                         return RedirectToAction("Index", "Home", new { Area = "Admin" });
