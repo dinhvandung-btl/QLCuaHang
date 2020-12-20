@@ -1,0 +1,50 @@
+﻿@model QLCuaHang.Models.NhapKho_CT
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>NhapKho_CT</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.HangHoa.TenHang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HangHoa.TenHang)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NhapKho.NguoiNhap)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NhapKho.NguoiNhap)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SLNhap)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SLNhap)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DGNhap)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DGNhap)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,20 @@
+﻿@model  IEnumerable<QLCuaHang.Models.HangHoa>
+@using QLCuaHang.Models
+@using System.Linq
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-sm-3" style="background-color:lightpink;margin-top:5px;text-align:center;">
+            <h3>@Html.DisplayFor(modelItem => item.TenHang) </h3>
+            @Html.Image("../" + item.HinhAnh, "alt", "200")<br />
+            @Html.DisplayFor(modelItem => item.Dongia)<br />
+            <a class="btn btn-info btn-sm" href="@Url.Action("Details", "HangHoas", new { id = item.MaHang })">
+                Xem chi tiết
+            </a>
+       </div>
+    }
+</div>
