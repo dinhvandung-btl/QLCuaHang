@@ -132,6 +132,8 @@
     <Compile Include="Areas\Admin\Controllers\HangHoasController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\KhachHangsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\NhapKho_CTController.cs" />
+    <Compile Include="Areas\Admin\Controllers\XuatKho_CTController.cs" />
     <Compile Include="Controllers\HangHoasController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KhachHangsController.cs" />
@@ -235,6 +237,16 @@
     <Content Include="Areas\Admin\Views\HangHoas\Details.cshtml" />
     <Content Include="Areas\Admin\Views\HangHoas\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\HangHoas\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\NhapKho_CT\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\NhapKho_CT\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\NhapKho_CT\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\NhapKho_CT\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\NhapKho_CT\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\XuatKho_CT\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\XuatKho_CT\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\XuatKho_CT\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\XuatKho_CT\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\XuatKho_CT\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

@@ -28,6 +28,12 @@
                     <li class="nav-item p-2">
                         @Html.ActionLink("Hàng Hóa", "Index", "HangHoas")
                     </li>
+                    <li class="nav-item p-2">
+                        @Html.ActionLink("Nhập Kho", "Index", "NhapKho_CT")
+                    </li>
+                    <li class="nav-item p-2">
+                        @Html.ActionLink("Xuất Kho", "Index", "XuatKho_CT")
+                    </li>
                     @if (Session["MaKhachHang"] == null)
                     {
                         <li class="nav-item p-2">

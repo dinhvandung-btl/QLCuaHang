@@ -1,0 +1,51 @@
+﻿@model QLCuaHang.Models.XuatKho_CT
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>XuatKho_CT</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.HangHoa.TenHang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HangHoa.TenHang)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.XuatKHo.MaKH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.XuatKHo.MaKH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SLXuat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SLXuat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DGXuat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DGXuat)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
